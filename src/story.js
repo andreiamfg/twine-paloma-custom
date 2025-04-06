@@ -429,7 +429,7 @@ _.extend(Story.prototype, {
 		
 		window.passage = passage;
 
-		$('#passage').html(passage.render()).fadeIn('slow');
+		$('#passage').html(passage.render());//.fadeIn('slow');
 		$('html, body').animate({scrollTop: $("#passage").offset().top}, 1000);
 		this.pcolophon();
 
@@ -452,7 +452,7 @@ _.extend(Story.prototype, {
 	
 	pcolophon: function() {
 		if ($.inArray('End', window.passage.tags) > -1 && this.passage('StoryColophon') != null) {
-			$(this.passage('StoryColophon').render()).hide().appendTo("#passage").fadeIn('slow');
+			$(this.passage('StoryColophon').render()).hide().appendTo("#passage");//.fadeIn('slow');
 		}
 	},
 	
